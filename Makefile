@@ -5,6 +5,8 @@ all:
 	docker run -d -p 80:80 --name ssebs-www website
 docker:
 	docker build -t website .
+build:
+	docker build -t website .
 run:
 	docker run -d -p 80:80 --name ssebs-www website 
 stop:

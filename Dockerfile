@@ -1,4 +1,9 @@
-FROM httpd:2.4
+FROM php:apache
 
-COPY ./public_html/ /usr/local/apache2/htdocs/
+RUN rm -rf /var/www/html/*
+
+COPY ./public_html/ /var/www/html/
+
+RUN chown -R www-data:www-data /var/www/html/
+
 EXPOSE 80:80
