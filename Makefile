@@ -12,3 +12,6 @@ run:
 stop:
 	@docker stop ssebs-www
 	@docker rm ssebs-www
+publish:
+	docker build -t ssebs/ssebs-www:latest .
+	docker push ssebs/ssebs-www
